@@ -1,0 +1,33 @@
+<ion-content>
+
+    <ion-grid fixed>
+        <ion-row>
+            <ion-col class="ion-text-center">
+                <div>
+                    <p>Películas Favoritas</p>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-slides *ngIf="dataLocal.peliculas.length === 0" [options]="slideOpts">
+        <ion-slide>
+            <h1>No hay películas favoritas</h1>
+        </ion-slide>
+    </ion-slides>
+
+    <ion-grid *ngIf="dataLocal.peliculas.length > 0" fixed>
+        <ion-row>
+            <ion-col size="6" *ngFor="let pelicula of peliculas">
+                <ion-card (click)="verDetalle( pelicula.id )">
+                    <img [src]="pelicula.poster_path | imagen">
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+
+
+</ion-content>

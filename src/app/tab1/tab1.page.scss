@@ -1,0 +1,28 @@
+ion-content {
+    --background: linear-gradient(to bottom, #7fdee8, #84eade, #9af4cd, #bcfbba, #e5ffa9);
+}
+
+p {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, rgb(240, 168, 12), #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 5s linear alternate infinite;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes animate {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}

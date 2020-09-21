@@ -1,0 +1,7 @@
+<ion-slides [options]="slideOptsBackdrop" pager="true">
+    <ion-slide *ngFor="let pelicula of peliculas | filtroImagen">
+        <ion-card (click)="verDetalle( pelicula.id )" class="sombra">
+            <img [src]="pelicula.backdrop_path | imagen"><img>
+        </ion-card>
+    </ion-slide>
+</ion-slides>

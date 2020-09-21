@@ -1,0 +1,18 @@
+<ion-slides [options]="slideOptsPares">
+    <ion-slide *ngFor="let pares of peliculas | pares">
+        <ion-row>
+            <ion-col size="12" *ngFor="let pelicula of pares">
+                <ion-card (click)="verDetalle( pelicula.id )">
+                    <img class="poster" [src]="pelicula.poster_path | imagenpares">
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-slide>
+
+    <ion-slide class="slide-mas">
+        <div class="container-boton">
+            <img src="assets/img/mas.svg" class="boton" (click)="onClick()">
+        </div>
+    </ion-slide>
+
+</ion-slides>
